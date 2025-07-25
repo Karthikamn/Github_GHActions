@@ -16,3 +16,6 @@ jobs:
      run: |
       echo "Github event that triggered this workflow ${{github.event_name}}"
       echo "Github SHA value is ${{github.sha}}"
+      echo "Github ref details is ${{github.ref}}"
+      echo "Actor is ${{github.actor}}"
+      
