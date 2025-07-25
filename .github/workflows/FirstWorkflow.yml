@@ -2,20 +2,22 @@ name: First Workflow
 
 on: 
  workflow_dispatch
+
+env:
+  MY_VAR: 'workflow'
  
 jobs:
  build:
+  env:
+   MY_VAR: 'jobs'
   runs-on: ubuntu-latest
   steps:
+  
    - name: Setup Java JDK
-     uses: actions/setup-java@v3.14.1
-     with:
-      java-version: '17'
-      distribution: 'microsoft'
-   - name: Info
-     run: |
-      echo "Github event that triggered this workflow ${{github.event_name}}"
-      echo "Github SHA value is ${{github.sha}}"
-      echo "Github ref details is ${{github.ref}}"
-      echo "Actor is ${{github.actor}}"
+     env:
+      MY_VAR: 'steps'
+     run: echo '${{env.MY_VAR}}'  
+     
+     
+
       
