@@ -7,11 +7,8 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-   - name: Print
-     run: echo 'hello World'
- test:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Display
-     run: echo "test the step"
-  
+   - name: Setup Java JDK
+     uses: actions/setup-java@v3.14.1
+     with:
+      java-version: '17'
+      distribution: 'microsoft'
