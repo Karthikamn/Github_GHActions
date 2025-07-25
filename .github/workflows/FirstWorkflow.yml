@@ -12,3 +12,7 @@ jobs:
      with:
       java-version: '17'
       distribution: 'microsoft'
+   - name: Info
+     run: |
+      echo "Github event that triggered this workflow ${{github.event_name}}"
+      echo "Github SHA value is ${{github.sha}}"
