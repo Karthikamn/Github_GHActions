@@ -1,0 +1,16 @@
+name: First Workflow
+
+on: push
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Print
+     run: echo 'hello World"
+ test:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Display
+     run: echo "test the step"
+  
