@@ -1,0 +1,17 @@
+name: Environment
+
+
+on:
+ workflow_dispatch:
+  inputs:
+   TARGET_ENVIRONMENT:
+    type: environment
+    default: dev
+
+jobs:
+ dev_environment_deployment:
+  runs-on: ubuntu-latest
+  environment: ${{inputs.TARGET_ENVIRONMENT}}
+  steps: 
+   - name: Print the var value of the environment
+     run : echo ' ${{vars.var}}
