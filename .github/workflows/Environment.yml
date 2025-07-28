@@ -14,4 +14,4 @@ jobs:
   environment: ${{inputs.TARGET_ENVIRONMENT}}
   steps: 
    - name: Print the var value of the environment
-     run : echo ' ${{vars.var}}
+     run : echo '${{vars.var}}'
