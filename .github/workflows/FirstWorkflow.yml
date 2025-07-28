@@ -16,7 +16,7 @@ jobs:
    - name: Setup Java JDK
      env:
       MY_VAR: 'steps'
-     run: echo '${{vars.MY_VAR}}'  
+     run: echo '${{secrets.PAT}}'  
      
      
 
